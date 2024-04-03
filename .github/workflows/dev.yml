@@ -3,6 +3,7 @@ on:
     push:
       branches:
         - dev
+    pull_request:
 jobs:
     review:
       runs-on: ubuntu-latest
