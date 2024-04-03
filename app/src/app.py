@@ -7,6 +7,7 @@ app = Flask(__name__)
 def home():
     print('hi')
     print('hola hola hola')
+    print('hello world')
     return "Hello world and everyone in it"
 
 
