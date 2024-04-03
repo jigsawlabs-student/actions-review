@@ -1,0 +1,15 @@
+name: Deploy to AWS ECR and Terraform Apply
+on:
+    push:
+      branches:
+        - dev
+jobs:
+    review:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Review Code
+        uses: edelauna/gpt-review@v1
+        with:
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
